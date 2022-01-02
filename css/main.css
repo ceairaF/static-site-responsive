@@ -53,6 +53,7 @@ header {
   	justify-content: center;
   	align-items: center;
 	flex-flow:column;
+	width:100%;
 }
 
 header h1 {
@@ -78,6 +79,8 @@ header nav ul li {
 	font-size: 0.875em;
 	padding: 0 10px;
 	display:flex;
+	flex-flow:column;
+	width:100%;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -93,7 +96,6 @@ header nav ul li a{
   	justify-content: center;
   	align-items: center;
 	flex-flow: column;
-	flex-basis:400px;
 	
 }
 
@@ -125,7 +127,7 @@ header nav ul li a{
 .section-two,
 .section-three {
 	height: auto;
-	border-top: 1px solid #eee;
+	border-top: 2px solid #eee;
 }
 
 .section-one h3 {
@@ -178,4 +180,74 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+
+@media all and (min-width:768px) {
+	/* Tablet styles here */
+
+	.bottom-section {
+		display:flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow:row nowrap;
+		flex-basis:auto;
+
+		
+	}
+	.section-one {
+		display:flex;
+		justify-content:flex-start;
+		align-items: flex-start;
+		flex-flow:column;
+		flex-basis:auto;
+
+	}
+	
+	.section-two {
+		display:flex;
+		justify-content:flex-start;
+		align-items: flex-start;
+		flex-flow:column;
+		flex-basis:auto;
+		flex-shrink:4;
+		border-left: 2px solid #eee;
+		border-right: 2px solid #eee;
+	}
+
+	.section-three {
+		display:flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow:column;
+		flex-basis:auto;
+		
+	}
+}
+
+@media all and (min-width:1200px) {
+	/* Desktop styles here */
+	
+	header {
+		justify-content: space-between;
+		flex-flow:row nowrap;
+	}
+	
+	header h1 {
+		width:30%;
+		padding: 0;
+		border-bottom: none;
+		text-align:left;
+
+	}
+	header nav ul{
+		display:flex;
+		justify-content:space-between;
+
+	}
+
+	nav {
+		width:40%;
+	}
+
 }
